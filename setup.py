@@ -8,3 +8,22 @@ setup(
     packages=find_packages(),        # Automatically find all packages
     install_requires=[]              # Dependencies list (from requirements.txt if needed)
 )
+
+
+
+
+
+
+
+# python-dotenv
+# google-generativeai
+# langchain
+# langchain-community
+# langchain-google-genai
+# pypdf
+# faiss-cpu
+# streamlit
+# -e .
+
+
+#Conversational buffer memmory
