@@ -37,7 +37,7 @@ def get_vector_store(text_chunks):
 def get_conversational_chain(vector_store):
     """Create a conversational retrieval chain with Google Gemini."""
     llm = ChatGoogleGenerativeAI(
-        model="gemini-1.5-flash",  # Updated from chat-bison to Gemini
+        model="gemini-1.5-flash",
         google_api_key=GOOGLE_API_KEY,
         temperature=0
     )
@@ -48,3 +48,14 @@ def get_conversational_chain(vector_store):
         memory=memory
     )
     return conversation_chain
+
+# -------- NEW FEATURE: QUIZ GENERATOR --------
+def generate_quiz(text):
+    """Generate quiz questions from PDF content."""
+    llm = ChatGoogleGenerativeAI(
+        model="gemini-1.5-flash",
+        google_api_key=GOOGLE_API_KEY,
+        temperature=0
+    )
+    prompt = f"Create 5 multiple-choice quiz questions with 4 options each and the correct answer marked from the following text:\n\n{text}"
+    return llm.invoke(prompt).content
