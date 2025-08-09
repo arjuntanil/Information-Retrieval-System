@@ -1,8 +1,8 @@
 python-dotenv
+google-generativeai
 langchain
 langchain-community
+langchain-google-genai
 pypdf
 faiss-cpu
 streamlit
-llama-cpp-python
-sentence-transformers
